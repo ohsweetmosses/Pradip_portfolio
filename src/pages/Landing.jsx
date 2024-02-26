@@ -15,7 +15,6 @@ function index() {
       <SocialLinks />
       <Projects />
       <Experience />
-      <Contact />
     </div>
   )
 }

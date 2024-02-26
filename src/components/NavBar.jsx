@@ -36,12 +36,16 @@ const NavBar = () => {
             }
         }, 100); 
     };
-    
 
+    // Define the style for Times New Roman font
+    const timesNewRomanStyle = {
+        fontFamily: 'Times New Roman'
+    };
+    
     return (
         <div className="flex z-50 justify-between items-center w-full h-20 px-4 text-white bg-black ">
-            <div>
-                <h1 className="text-5xl font-signature ml-2">Pradip</h1>
+            <div style={timesNewRomanStyle}>
+                <h1 className="text-5xl font-Calibri ml-2">Shubham Mishra</h1>
             </div>
 
             <ul className="hidden md:flex cursor-pointer">
@@ -51,7 +55,7 @@ const NavBar = () => {
                     </li>
                 ))}
                 <li className="px-4 cursor-pointer capitalize font-medium text-grey-500 hover:scale-105 duration-200">
-                    <Link to="/contact">Contact</Link>
+                    <Link to="/contact" style={timesNewRomanStyle}>Contact</Link>
                 </li>
             </ul>
 
@@ -62,11 +66,11 @@ const NavBar = () => {
                 <ul className="flex flex-col justify-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
                     {links.map(({ id, link }) => (
                         <li key={id} className="px-4 cursor-pointer capitalize py-6 text-4xl">
-                            <Link to="/" onClick={() => {handleScroll(link); setNav(!nav)}}>{link}</Link>
+                            <Link to="/" onClick={() => {handleScroll(link); setNav(!nav)}} style={timesNewRomanStyle}>{link}</Link>
                         </li>
                     ))}
                     <li className="px-4 text-white cursor-pointer capitalize py-6 text-4xl">
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/contact" style={timesNewRomanStyle}>Contact</Link>
                     </li>
                 </ul>
             )}
